@@ -49,7 +49,7 @@ Example:
   ```
 
 - Query **System** TCC entries specifically for the service `kTCCServiceScreenCapture` and export and have it piped to jq:
-  ```
+   ```
   sudo tseec -s --service kTCCServiceScreenCapture --export --json | jq
   ```
 
@@ -57,6 +57,25 @@ Example:
   ```
   sudo tseec -s --service kTCCServiceSystemPolicyAllFiles  --export --json | jq -r '.[] | "\(.client) - Last Modified: \(.lastModified)"'
   ```
+
+
+  Each entry will show as the example below
+  ```
+    {
+    "clientType": 0,
+    "flags": 0,
+    "lastModified": "2024-04-22 03:32:03",
+    "authReason": "System Set",
+    "client": "com.microsoft.teams",
+    "bootUUID": "UNUSED",
+    "authValue": 2,
+    "indirectObjectIdentifier": "UNUSED",
+    "service": "kTCCServiceScreenCapture",
+    "lastReminded": "2024-04-22 03:32:03",
+    "indirectObjectIdentifierType": 0,
+    "authVersion": 1
+  }
+  ````
 
   
 
