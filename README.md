@@ -24,6 +24,8 @@
 
 `tseec` is located in `/usr/local/bin/tseec`
 
+**NOTE:** In order to use `tseec` Full Disk Access needs to be given or a PPPC profile needs to be deployed.
+
 ```Usage: tseec [options]
 Options:
   -h, --help      Show help information
